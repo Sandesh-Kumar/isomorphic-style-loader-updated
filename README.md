@@ -2,11 +2,11 @@
 
 # Isomorphic CSS style loader for [Webpack](http://webpack.github.io)
 
-[![NPM version](https://img.shields.io/npm/v/isomorphic-style-loader.svg)](https://www.npmjs.com/package/isomorphic-style-loader)
-[![NPM downloads](https://img.shields.io/npm/dw/isomorphic-style-loader.svg)](https://www.npmjs.com/package/isomorphic-style-loader)
-[![Library Size](https://img.shields.io/github/size/kriasoft/isomorphic-style-loader/src/withStyles.js.svg)](https://bundlephobia.com/result?p=isomorphic-style-loader)
-[![Online Chat](https://img.shields.io/discord/643523529131950086?label=Chat)](https://discord.gg/UFkeXwsARY)
+[![NPM version](https://img.shields.io/npm/v/isomorphic-style-loader-updated.svg)](https://www.npmjs.com/package/isomorphic-style-loader-updated)
+[![NPM downloads](https://img.shields.io/npm/dw/isomorphic-style-loader-updated.svg)](https://www.npmjs.com/package/isomorphic-style-loader-updated)
+[![Library Size](https://img.shields.io/github/size/Sandesh-Kumar/isomorphic-style-loader-updated/src/withStyles.js.svg)](https://bundlephobia.com/result?p=isomorphic-style-loader-updated)
 
+## This is forked version of #isomorphic-style-loader# with React 18 support
 CSS style loader for Webpack that works similarly to
 [style-loader](https://github.com/webpack/style-loader), but is optimized for
 [critical path CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/)
@@ -22,7 +22,7 @@ chat room on Discord to stay up to date
 ## How to Install
 
 ```bash
-$ npm install isomorphic-style-loader --save-dev
+$ npm i isomorphic-style-loader-updated --save-dev
 ```
 
 ## Getting Started
@@ -37,7 +37,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'isomorphic-style-loader',
+          'isomorphic-style-loader-updated',
           {
             loader: 'css-loader',
             options: {
@@ -67,7 +67,7 @@ information visit https://webpack.js.org/configuration/module/.
 ```js
 /* App.js */
 import React from 'react'
-import withStyles from 'isomorphic-style-loader/withStyles'
+import withStyles from 'isomorphic-style-loader-updated/withStyles'
 import s from './App.scss'
 
 function App(props, context) {
@@ -93,7 +93,7 @@ on the server. See server-side rendering example below:
 import express from 'express'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import StyleContext from 'isomorphic-style-loader/StyleContext'
+import StyleContext from 'isomorphic-style-loader-updated/StyleContext'
 import App from './App.js'
 
 const server = express()
@@ -162,7 +162,7 @@ to make your markup interactive:
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import StyleContext from 'isomorphic-style-loader/StyleContext'
+import StyleContext from 'isomorphic-style-loader-updated/StyleContext'
 import App from './App.js'
 
 const insertCss = (...styles) => {
@@ -185,7 +185,7 @@ Please note that you still need to pass `insertCss` function to `StyleContext.Pr
 
 ```js
 import React from 'react'
-import useStyles from 'isomorphic-style-loader/useStyles'
+import useStyles from 'isomorphic-style-loader-updated/useStyles'
 import s from './App.scss'
 
 const App = (props) => {
@@ -213,7 +213,3 @@ The MIT License © 2015-present Kriasoft ([@kriasoft](https://twitter.com/kriaso
 All rights reserved.
 
 ---
-Made with ♥ by
-Konstantin Tarkus ([@koistya](https://twitter.com/koistya), [blog](https://medium.com/@tarkus)),
-Vladimir Kutepov ([frenzzy](https://github.com/frenzzy))
-and [contributors](https://github.com/kriasoft/isomorphic-style-loader/graphs/contributors)
